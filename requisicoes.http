@@ -1,0 +1,31 @@
+### Listar
+GET http://localhost:8080/livros
+Accept: application/json
+
+### Cadastrar
+POST http://localhost:8080/livros
+Content-Type: application/json
+Accept: application/json
+
+{"titulo": "Dom Casmurro", "autor": "Machado de Assis", "preco": 39.9}
+
+### Buscar por ID
+GET http://localhost:8080/livros/1
+
+### Filtrar
+GET http://localhost:8080/livros?titulo=CASM
+
+### Atualizar (todos os campos)
+PUT http://localhost:8080/livros/1
+Content-Type: application/json
+
+{"titulo": "Dom Casmurro Atualizado", "autor": "Machado de Assis", "preco": 39.9}
+
+### Excluir
+DELETE http://localhost:8080/livros/1
+
+### Inválido: 400
+POST http://localhost:8080/livros
+Content-Type: application/json
+
+{}
